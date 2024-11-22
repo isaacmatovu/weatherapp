@@ -17,10 +17,13 @@ weatherbtn.addEventListener('click',async function(){
    if(searchterm){
       await weatherdata(searchterm);
    } else{
-      console.log('enter a location')
+     alert("Enter a location");
    }
 })
 
+//create elements
+const outerdiv = document.createElement('div');
+outerdiv.classList.add('outerdiv');
 
 
 
@@ -48,11 +51,13 @@ async function weatherdata(searchterm){
 
    
    
-   div.appendChild(header)
-   div.appendChild(conditions)
-   div.appendChild(datetime)
-   div.appendChild(p)
-   div.appendChild(img)
+     outerdiv.appendChild(header)
+     outerdiv.appendChild(conditions)
+     outerdiv.appendChild(datetime)
+     outerdiv.appendChild(p)
+     outerdiv.appendChild(img)
+     div.appendChild(outerdiv)
+   
 
    
    } catch(err){
